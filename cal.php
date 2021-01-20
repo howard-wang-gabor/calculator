@@ -28,20 +28,30 @@ class calculator{
             echo $result."\n";
             return $result;
         }}
-    public function get1(){
+    public function getter1(){
         echo $this->a."\n";
         return $this->a;
     }
-    public function get2(){
+    public function getter2(){
         echo $this->b."\n";
         return $this->b;
     }
+    public function setter1($n){
+        $this->a = $n;
     }
+    public function setter2($n){
+        $this->b = $n;
+    }
+}
 
-$A = new calculator(3,0);
+$A = new calculator(3,4);
 $A->add();
 $A->multiply();
 $A->divide();
-$A->get1();
-$A->get2();
+$A->getter1();
+$A->getter2();
+$A->setter1(6);
+$A->getter1();
+$A->setter2(10);
+$A->getter2();
 ?>
